@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang = "en">
+<script language="JavaScript">
+</script>
+
+<head>
+
+<link rel="stylesheet" type="text/css" href="style.css" media="screen" />
+
+</head>
+
+<body>
+	<div id="wrapper">
+		<div id = "callout">
+			<p> Created by BitsPlease_3</p>
+		</div>
+
+
+		<header>
+			<a href = "#"><img src= "http://www.pub.umich.edu/sites/default/files/wordmark.png"/></a>
+		</header>
+		
+		<center><div id="menu">
+			<ul>
+				<li><a href="index.html">Home</a></li>
+				<li><a href="aboutus.html">About us</a></li>
+				<li><a href="services.html">Services</a></li>
+				<li><a href="contactus.html">Contact</a></li>
+			</ul>
+		</div>
+
+		<br><div id="title">
+			<p> Your Schedule </p>
+		</div>
+
+		<table id="t01">
+		  <tr>
+		  	<th>Time</th>
+		    <th>Mon</th>
+		    <th>Tue</th>		
+		    <th>Wed</th>
+		    <th>Thu</th>
+		    <th>Fri</th>
+		  </tr>
+		  <tr>
+		    <td>8</td>
+		    <td> </td>		
+		    <td> </td>
+		    <td> </td>
+		    <td> </td>
+		    <td> </td>
+		  </tr>
+		  <tr>
+		   <td>9</td>
+		    <td> </td>		
+		    <td> </td>
+		    <td> </td>
+		    <td> </td>
+		    <td> </td>
+		  </tr>
+		  <tr>
+		    <td>10</td>
+		    <td> </td>		
+		    <td> </td>
+		    <td> </td>
+		    <td> </td>
+		    <td> </td>
+		  </tr>
+		 <tr>
+		    <td>11</td>
+		    <td> </td>		
+		    <td> </td>
+		    <td> </td>
+		    <td> </td>
+		    <td> </td>
+		  </tr>
+		   <tr>
+		    <td>12</td>
+		    <td> </td>		
+		    <td> </td>
+		    <td> </td>
+		    <td> </td>
+		    <td> </td>
+		  </tr>
+		   <tr>
+		    <td>1</td>
+		    <td> </td>		
+		    <td> </td>
+		    <td> </td>
+		    <td> </td>
+		    <td> </td>
+		  </tr>
+		   <tr>
+		    <td>2</td>
+		    <td> </td>		
+		    <td> </td>
+		    <td> </td>
+		    <td> </td>
+		    <td> </td>
+		  </tr>
+		   <tr>
+		    <td>3</td>
+		    <td> </td>		
+		    <td> </td>
+		    <td> </td>
+		    <td> </td>
+		    <td> </td>
+		  </tr>
+		   <tr>
+		    <td>4</td>
+		    <td> </td>		
+		    <td> </td>
+		    <td> </td>
+		    <td> </td>
+		    <td> </td>
+		  </tr>
+		    <tr>
+		    <td>5</td>
+		    <td> </td>		
+		    <td> </td>
+		    <td> </td>
+		    <td> </td>
+		    <td> </td>
+		  </tr>
+		    <tr>
+		    <td>6</td>
+		    <td> </td>		
+		    <td> </td>
+		    <td> </td>
+		    <td> </td>
+		    <td> </td>
+		  </tr>
+		    <tr>
+		    <td>7</td>
+		    <td> </td>		
+		    <td> </td>
+		    <td> </td>
+		    <td> </td>
+		    <td> </td>
+		  </tr>
+		</table>
+
+		<br><br><div class = "dropbox">
+			<label>Select Term</label>
+				<select id = "termList">
+					{% for term in terms %}
+					    <option term = selected>{{ term['TermDescr'] }}<ctr></option>
+					{% endfor %}
+				</select>
+			<br>
+
+
+			<label>Select School</label>
+				<select id = "schoolList">
+					{% for school in schools %}
+						<option school = selected>{{ school['SchoolDescr'] }}<ctr></option>
+					{% endfor %}
+				</select>
+			<br>
+
+
+			<label>Select Subject</label>
+				<select id = "subjectList">
+					{% for subject in subjects %}
+						<option subject = selected>{{ subject['SubjectDescr'] }}<ctr></option>
+					{% endfor %}
+				</select>
+			<br>
+			</div>
+
+		<button Class="buttonFormat" type="button" onclick="alert('Course added!')">Add
+		</button>
+
+		<footer>
+			<div class= "section">
+				<center><br><p>Contact us at: <br> <b>djmorrow@umich.edu<b></p>
+			</div>
+		</footer>
+
+	</div>
+		<p style="text-align: center; padding: 0px">&#169;Copyright - BitsPlease_3, 2014.</p>
+
+</body>
+
+</html>

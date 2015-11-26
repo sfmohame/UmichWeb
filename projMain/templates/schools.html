@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div id = "term">
+		<br>
+		<label id="label"><u>Select School</u></label><br>
+			{% for school in schools %}
+				<a id="links" href="/schools/{{termcode}}/subject/{{ school['SchoolCode']}}">{{ school['SchoolDescr'] }}<br></a><ctr>
+			{% endfor %}
+		
+		<br><br>
+			
+	</div>
+
+{% endblock %}

@@ -1,0 +1,59 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div>
+		<br>
+		<button id="button"><big><big><strong>{{subSelected}} {{catNum}} Info: </strong></big></big></button><br>
+		<br></br>
+		
+			<div class="classinfo" style="border:3px dashed gray;">
+				{{ CourseDescr }}<br><br>
+				<strong>Credit Hours:</strong> {{ sections[0]['CreditHours']}}
+			</div>
+
+
+
+			<form method="get" target="_blank" action="http://www.ratemyprofessors.com/search.jsp?q=">
+              <input type="text" name="q" size="50" placeholder="Search on Rate my professor"/>
+              <input type="submit"  value="RateMyProfessor"/>
+            </form>
+
+		<table class='table table-striped table-condensed'>
+			<col align="center">
+			<tr>
+				<th>&nbsp;Section Number</th>
+				<th>&nbsp;Section Type</th>
+				<th>&nbsp;Enrollment Status</th>
+				<th>&nbsp;Available Seats</th>
+				<th>&nbsp;Waitlist Total</th>	
+				<th>&nbsp;Instructor</th>
+				<th>&nbsp;Meeting Days</th>
+				<th>&nbsp;Times</th>
+			</tr>
+				{% for section in sections %}
+				<tr>
+					<td>&nbsp;{{section['SectionNumber']}}</td>
+					&nbsp;
+					<td>&nbsp;{{section['SectionType'] }}</td> 
+					&nbsp;
+					<td>&nbsp;{{section['EnrollmentStatus'] }}</td> 
+					&nbsp;
+					<td>&nbsp;{{section['AvailableSeats']}}</td>
+					&nbsp;
+					<td>&nbsp;{{section['WaitTotal']}}</td>
+					&nbsp;
+					<td>&nbsp;{{section['Meeting']['Instructors']}}</td>
+					&nbsp;
+					<td>&nbsp;{{section['Meeting']['Days']}}</td>
+					&nbsp;
+					<td>&nbsp;{{section['Meeting']['Times']}}</td>
+				</tr>
+				{% endfor %}
+		</table>
+		<br><br>
+			
+	</div>
+
+{% endblock %}
+
+ <!--- {{SearchResults[loop.index0]['ClassNumber']}} -->

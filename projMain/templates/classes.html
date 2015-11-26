@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div id = "term">
+		<br>
+		<label><u>Select Class</u></label><br>
+			{% for class in classes %}
+				<a id="links" href="/schools/{{termcode}}/subject/{{sub}}/{{subSelected}}/{{ class['CatalogNumber'] }}">{{ class['CatalogNumber'] }} - {{ class['CourseDescr'] }}<br></a><ctr>
+			{% endfor %}
+		<br><br>	
+	</div>
+
+{% endblock %}

@@ -1,0 +1,57 @@
+<!doctype html>
+<html>
+
+<head>
+  <link rel="stylesheet" type="text/css" href={{url_for('static', filename="style.css")}}/>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+  
+</head>
+
+  <head>
+    {% block head %}
+     <link rel="icon" href="https://weblogin.umich.edu/cosign/images/blockm.png" type="image/ico">
+    <title>Schedulizer</title>
+        <body>
+          <div id="wrapper">
+
+            <header>
+              <a href = "/"><img src= "http://www.pub.umich.edu/sites/default/files/wordmark.png"/></a>
+            </header>
+
+            <center>
+              <div id="menu">
+              <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/aboutus">About us</a></li>
+                <li><a href="/services">Services</a></li>
+                <li><a href="/contact">Contact</a></li>
+              </ul>
+            </div>
+
+
+ 
+
+
+
+
+            
+    {% endblock %}
+          </head>
+
+  <div id="content">
+    {% block content %}
+
+    {% endblock %}
+  </div>
+
+      <div id="footer">
+        {% block footer %}
+           <footer>
+              <hr>
+           </footer>
+
+    <p style="text-align: center; padding: 0px; opacity:0.3">&#169;Copyright - Joe Moma, 2015.</p>
+        {% endblock %}
+    </div>
+  </body>
+</html> 

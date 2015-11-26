@@ -1,0 +1,53 @@
+{% extends "base.html" %}
+
+{% block content %}
+<br>
+
+<script src="https://maps.googleapis.com/maps/api/js"></script>
+    <script>
+      function initialize() {
+        var mapCanvas = document.getElementById('map-canvas');
+        var mapOptions = {
+          center: new google.maps.LatLng(42.27719, -83.7382),
+          zoom: 16,
+          mapTypeId: google.maps.MapTypeId.HYBRID
+        }
+        var map = new google.maps.Map(mapCanvas, mapOptions)
+      }
+      google.maps.event.addDomListener(window, 'load', initialize);
+    </script>
+
+
+    <div id="label">
+        <label id="label"><u>Useful Links</u></label><br>
+        
+        <br></br>
+
+            <a class='nostyle' href='http://www.ratemyprofessors.com/campusRatings.jsp?sid=1258'>
+               <span class='button'>Rate My Professors</span>
+            </a>
+
+            <a class='nostyle' href='http://admissions.umich.edu/academics-majors/majors-degrees'>
+               <span class='button'>Majors</span>
+            </a>
+
+            <a class='nostyle' href='http://umich.edu/'>
+                <span class='button'>University Homepage</span>
+            </a>
+
+            <a class='nostyle' href='http://www.lsa.umich.edu/cg/'>
+                <span class='button'>LSA Course Guide</span>
+            </a>
+             
+
+            <br></br>
+            <br></br>
+
+
+
+  
+
+<div id="map-canvas">
+
+</div>
+{% endblock %}

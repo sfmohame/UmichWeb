@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block content %}
+	<div id='term'><br>
+		<label id="label"><u>Select Term</u></label><br>
+		
+			{% for term in terms %}
+			    <a id="links" href="/schools/{{ term['TermCode']}}">{{ term['TermDescr'] }}<br></a>
+			{% endfor %}
+		
+		<br><br>
+			
+	</div>
+
+
+{% if api_error %}
+<b>Getting the API terms failed!</b>
+Did you set the API token?
+{% endif %}
+
+{% endblock %}
